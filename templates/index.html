@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fitness Level Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=10">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>🏋️‍♂️ Fitness Level Prediction</h2>
+        <form id="predictForm" onsubmit="return false;">
+            <div class="form-group">
+                <input type="number" name="age" placeholder="Age" min="12" max="80" required>
+                <input type="number" name="bmi" placeholder="BMI" min="10" max="40" required>
+                <input type="number" name="daily_steps" placeholder="Daily Steps" min="500" max="25000" required>
+                <input type="number" name="hours_sleep" placeholder="Hours of Sleep" min="3" max="12" required>
+                <input type="number" name="stress_level" placeholder="Stress Level (1-10)" min="1" max="10" required>
+                <input type="number" name="hydration_level" placeholder="Hydration Level (1-10)" min="1" max="10"
+                    required>
+            </div>
+            <button type="submit">Predict Fitness Level</button>
+            <button type="button" onclick="clearForm()">Clear Form</button>
+        </form>
+    </div>
+
+    <div id="overlay"></div>
+    <div id="resultPopup">
+        <p id="popupMessage"></p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+<div id="fitnessBarContainer" style="display:none;">
+    <p>Visual Fitness Score:</p>
+    <div style="background: #ddd; border-radius: 10px; height: 20px; width: 100%;">
+      <div id="fitnessBar" style="width: 0; height: 100%; border-radius: 10px;"></div>
+    </div>
+  </div>
+  
+    <canvas id="inputRadarChart"  style="display:none;"></canvas>
+
+
+    <script src="{{ url_for('static', filename='js/script.js') }}?v=10"></script>
+</body>
+
+</html>
+
+
+

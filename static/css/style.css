@@ -1,0 +1,119 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    max-width: 500px;
+    margin: 40px auto;
+  }
+  
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+button {
+    padding: 12px;
+    background-color: #4b7bec;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #3867d6;
+}
+
+#resultPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 10;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 9;
+}
+
+#popupMessage {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#inputRadarChart {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 30px auto;
+    display: block;
+    max-width: 400px;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* keeps it square */
+}
+
+#fitnessBar {
+    background: linear-gradient(90deg, red, orange, green);
+    transition: width 0.8s ease;
+  }
+
+  #fitnessBarContainer {
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto;
+    text-align: center;
+    font-weight: bold;
+    color: #eee;
+  }
+  
+  #fitnessBarContainer div {
+    background: #ddd;
+    border-radius: 10px;
+    height: 20px;
+    overflow: hidden;
+  }
+  
